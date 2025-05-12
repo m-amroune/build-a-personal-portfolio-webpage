@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     font-family: "Lato", serif;
-    overflow: hidden;
   }
   
   :root{
@@ -18,11 +17,13 @@
   
   body{
     color: white;
+    padding-top: 80px;
   }
   
   nav{
     position: fixed;
     height: 80px;
+    padding: 10px;
     background-color: var(--red-color);
     width: 100%;
     display: flex;
@@ -61,14 +62,14 @@
     color: var(--red-color);
     font-weight: 400;
     font-size: 2rem;
-    
+    height: 100vh;
   }
   
   
   #projects{
     background-color: var(--blue-color);
     height: 1200px;
-   
+   min-height: 600px
   }
   
   .img-projects{
@@ -76,6 +77,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-left: 20px;
+    gap: 20px
   }
   .img-projects a img{
     height: 400px;
@@ -147,3 +149,13 @@
   height: 300px;
     }
   }
+
+  @media (max-width: 600px) {
+    nav {
+        justify-content: center; 
+    }
+
+    .nav-elements {
+        flex-direction: column; 
+    }
+}
